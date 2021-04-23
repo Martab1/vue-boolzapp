@@ -59,6 +59,7 @@ body{
 /* SIDE layout */
 
 .container .side{
+    overflow-y: auto;
     flex-direction: column;
     flex-basis: 35%;
     background:#fff;
@@ -234,7 +235,8 @@ body{
 /* footer */
 .footer-content {
     padding: 10px 0;
-    background: #ECE5DD;
+    /* background: #ECE5DD; */
+    background: rgba(234 231 228);
 }
 
 
