@@ -26,6 +26,10 @@ body{
     display: flex;
 }
 
+.list-style{
+    list-style: none;
+}
+
 /* GENERAL LAYOUT */
 
 .container{
@@ -39,7 +43,8 @@ body{
     flex-basis: 65%;
     background-image: #ccc;
     flex-direction: column;
-    background: url(../img/mine.jpg)
+    background-image: url(../img/mine.jpg);
+   
 }
 
 .content .main-content{
@@ -48,8 +53,8 @@ body{
 
 .header-content,
 .footer-content{
-    background: #f1f0ef;
-    height: 70px
+    background: #f1f1f1;
+    /* height: 70px; */
 }
 
 /* SIDE layout */
@@ -67,10 +72,9 @@ body{
 
 .side .contacts{
     flex-grow: 1;
-    background: blue;
 }
 
-/* side style first section */
+/* side style first section ( & header content) */
 
 .header-side{
     align-items: center;
@@ -78,25 +82,29 @@ body{
     margin: 12px  0; 
 }
 
-.header-side .user {
+.header-side .user,
+.header-content .user {
    align-items: center;
 }
 
-.header-side .user img{
+.header-side .user img,
+.header-content .user img{
    width: 45px;
    border-radius: 50%; 
    margin-right: 10px ;
 }
 
 
- .user-icons{
+ .user-icons,
+ .header-chat-icons{
    flex-grow: 1;
    text-align: right;
    font-size: 20px;
    color: rgb(197, 193, 193);
 }
 
-.user-icons i {
+.user-icons i,
+.header-chat-icons i {
     margin-right: 15px;
 }
 
@@ -122,3 +130,67 @@ body{
   color: rgba(99, 96, 96, 0.808);
   font-size: 12px;
 }
+
+
+/* side style third section */
+
+.new-chat{
+    background:#f1f0ef;
+    padding: 8px;
+}
+
+.search{
+    padding: 7px 25px;
+    color: rgb(197, 193, 193);
+    border: 1px solid rgb(245, 245, 245);    
+    background:#fff;   
+}
+
+.input{
+    border: 1px solid rgb(245, 245, 245);
+    border-left: none;
+    flex-grow: 1;
+    font-size: 11px;
+    padding: 5px 8px;
+    outline: none;
+   
+}
+
+.input::placeholder{
+    opacity: 0.3;
+}
+
+/* side style four section */
+
+.contacts .list{
+    flex-direction: column;
+}
+
+.contacts .list img{
+     width: 50px;
+     border-radius: 50%;
+     margin-right: 15px;
+}
+
+.list li {
+    align-items: center;
+    padding: 10px 20px;
+    border-top: .5px solid rgb(247, 245, 245);
+}
+
+
+/* CONTENT */
+/* header */
+
+.header-content{
+    padding: 12px;
+    align-items: center;
+}
+
+.header-content .user p{
+    color: grey;
+    font-size: 12px;
+}
+
+/* main */
+
