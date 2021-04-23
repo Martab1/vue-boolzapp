@@ -56,12 +56,6 @@ body{
   overflow-y: auto;
 }
 
-.header-content,
-.footer-content{
-    background: #f1f1f1;
-    /* height: 70px; */
-}
-
 /* SIDE layout */
 
 .container .side{
@@ -81,10 +75,12 @@ body{
 
 /* side style first section ( & header content) */
 
-.header-side{
+
+.header-side,
+.header-content{
+    background:#f1f1f1;
     align-items: center;
-    padding: 0 10px;
-    margin: 12px  0; 
+    padding: 12px;
 }
 
 .header-side .user,
@@ -187,11 +183,6 @@ body{
 /* CONTENT */
 /* header */
 
-.header-content{
-    padding: 12px;
-    align-items: center;
-}
-
 .header-content .user p{
     color: grey;
     font-size: 12px;
@@ -205,18 +196,11 @@ body{
 
 .sent{
     justify-content: flex-end;
-   
 }
 
 .received,
 .sent{
-    width: 100%;
     margin-bottom: 20px;
-
-}
-
-.sent .message{
-    background: #DCF8C6;
 }
 
 .message{
@@ -235,4 +219,40 @@ body{
     bottom:5px;
     right: 6px;
     color: rgb(168, 167, 167);
+}
+
+/* message colors */
+
+.received-color{
+    background:#fff;
+}
+
+.sent-color{
+    background:#DCF8C6;
+}
+
+/* footer */
+.footer-content {
+    padding: 10px 0;
+    background: #ECE5DD;
+}
+
+
+.footer-content .icon{
+     color: grey;
+     font-size: 20px;
+     padding: 12px 30px;
+}
+
+.new-message{
+    flex-grow: 1;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding: 5px 10px;
+    
+}
+
+.new-message::placeholder{
+    opacity: .3;
 }
