@@ -8,6 +8,7 @@
 
 body{
     font-family: 'Lato', sans-serif;
+    font-size: 14px;
     height: 100vh;
     background-image: linear-gradient(
         to bottom,
@@ -16,44 +17,108 @@ body{
         rgb(233, 231, 231) 15%,
         #ccc 100%
     );
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* UTILITIES */
+.flex{
+    display: flex;
+}
 
-/* LAYOUT */
+/* GENERAL LAYOUT */
 
 .container{
-    display: flex;
     width: 80%;
     min-width: 900px;
     height: 95%;
     background: #fff;
 }
 
-.container .side{
-    flex-basis: 35%;
-    background:#fff;
-}
-
-
 .container .content{
     flex-basis: 65%;
     background-image: #ccc;
-    display: flex;
     flex-direction: column;
     background: url(../img/mine.jpg)
 }
-
 
 .content .main-content{
   flex-grow: 1;
 }
 
-
 .header-content,
 .footer-content{
     background: #f1f0ef;
     height: 70px
+}
+
+/* SIDE layout */
+
+.container .side{
+    flex-direction: column;
+    flex-basis: 35%;
+    background:#fff;
+    border-right: 1px solid rgb(223, 223, 223);;
+}
+
+.side .desk-notifications{
+   background: rgb(178, 228, 248);
+}
+
+.side .contacts{
+    flex-grow: 1;
+    background: blue;
+}
+
+/* side style first section */
+
+.header-side{
+    align-items: center;
+    padding: 0 10px;
+    margin: 12px  0; 
+}
+
+.header-side .user {
+   align-items: center;
+}
+
+.header-side .user img{
+   width: 45px;
+   border-radius: 50%; 
+   margin-right: 10px ;
+}
+
+
+ .user-icons{
+   flex-grow: 1;
+   text-align: right;
+   font-size: 20px;
+   color: rgb(197, 193, 193);
+}
+
+.user-icons i {
+    margin-right: 15px;
+}
+
+/* side style second section */
+
+.desk-notifications .icon-notifications{
+    width: 45px;
+    height: 45px;
+    margin: 12px  18px; 
+    text-align: center;
+    font-size: 18px;
+    line-height: 45px;
+    border-radius: 50%;
+    background:#fff;
+    color:rgb(178, 228, 248)
+}
+
+.desk-notifications .text {
+   margin-top: 16px;
+}
+
+.desk-notifications .text a{
+  color: rgba(99, 96, 96, 0.808);
+  font-size: 12px;
 }

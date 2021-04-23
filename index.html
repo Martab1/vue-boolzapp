@@ -15,14 +15,50 @@
     <!-- vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
-<body>
+<body class=" flex">
 
-    <div id="app" class="container">
-        <aside class=" side">
-            side
+    <div id="app" class="container flex">
+
+        <!-- SIDE -->
+        <aside class=" side flex">
+            
+            <!-- first section side -->
+            <section class=" header-side flex">
+                <div class=" flex user">
+                    <img  src="./img/avatar_io.jpg" alt="">
+                    <span>Nome Utente</span>
+                </div>
+
+                
+                <div class="user-icons">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+                
+
+            </section>
+            <!-- second section side -->
+            <section class="desk-notifications flex">
+                <i class="fas fa-bell-slash icon-notifications"></i>
+                <div class="text">
+                    <p>Ricevi notifiche di nuovi messaggi </p>
+                    <a href="#">Attiva notifiche desktop</a>
+                 </div>
+                
+            </section>
+             <!-- third section side  -->
+            <section class=" new-chat">
+                <input type="text">
+            </section>
+             <!-- for section side -->
+            <section class="contacts">
+                 contacts
+            </section>
         </aside>
         
-        <main class="content">
+        <!-- CONTENT-->
+        <main class="content flex">
 
             <!-- header content-->
             <section class=" header-content">
