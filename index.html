@@ -25,8 +25,8 @@
             <!-- first section side -->
             <section class=" header-side flex">
                 <div class=" flex user">
-                    <img  src="./img/avatar_io.jpg" alt="">
-                    <span>Nome Utente</span>
+                    <img  src="./img/avatar_io.jpg" :alt="userName">
+                    <span>{{userName}}</span>
                 </div>
 
                 
@@ -58,31 +58,12 @@
              <!-- four section side -->
             <section class="contacts">
                  <div>
-                     <ul class=" flex list-style list ">
+                     <ul class=" flex list-style list " v-for="contact in contacts" >
                          <li class="flex">
-                             <img src="./img/avatar_1.jpg" alt="">
-                             <span>Nome Utente</span>
+                             <img :src= " './img/avatar' + contact.avatar + '.jpg' " :alt="contact.avatar">
+                             <span>{{contact.name}}</span>
                          </li>
 
-                         <li class="flex">
-                            <img src="./img/avatar_1.jpg" alt="">
-                            <span>Nome Utente</span>
-                        </li>
-
-                        <li class="flex">
-                            <img src="./img/avatar_1.jpg" alt="">
-                            <span>Nome Utente</span>
-                        </li>
-
-                        <li class="flex">
-                            <img src="./img/avatar_1.jpg" alt="">
-                            <span>Nome Utente</span>
-                        </li>
-
-                        <li class="flex">
-                            <img src="./img/avatar_1.jpg" alt="">
-                            <span>Nome Utente</span>
-                        </li>
                      </ul>
                  </div>
             </section>
@@ -93,16 +74,16 @@
 
             <!-- header content-->
             <section class=" header-content flex">
+                <!-- avatar -->
                 <div class=" flex user">
                     <img  src="./img/avatar_2.jpg" alt="">
                     <div>
-                        <span>Nome Utente</span>
+                        <span>Fabio</span>
                         <p>Ultimo accesso oggi alle 10.35</p>
                     </div>
                     
                 </div>
-
-                
+                <!-- icons-->
                 <div class="header-chat-icons">
                     <i class="fas fa-search "></i>
                     <i class="fas fa-paperclip"></i>
