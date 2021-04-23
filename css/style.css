@@ -175,9 +175,15 @@ body{
 }
 
 .list li {
+    cursor: pointer;
     align-items: center;
     padding: 10px 20px;
     border-top: .5px solid rgb(247, 245, 245);
+    transition: background .3s;
+}
+
+.list li:hover {
+   background: rgb(245, 245, 245);
 }
 
 
