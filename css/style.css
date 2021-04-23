@@ -8,4 +8,52 @@
 
 body{
     font-family: 'Lato', sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        #128C7E 0%,
+        #128C7E 15%,
+        rgb(233, 231, 231) 15%,
+        #ccc 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* LAYOUT */
+
+.container{
+    display: flex;
+    width: 80%;
+    min-width: 900px;
+    height: 95%;
+    background: #fff;
+}
+
+.container .side{
+    flex-basis: 35%;
+    background:#fff;
+}
+
+
+.container .content{
+    flex-basis: 65%;
+    background-image: #ccc;
+    display: flex;
+    flex-direction: column;
+    background: url(../img/mine.jpg)
+}
+
+
+.content .main-content{
+  flex-grow: 1;
+}
+
+
+.header-content,
+.footer-content{
+    background: #f1f0ef;
+    height: 70px
 }
