@@ -108,16 +108,18 @@ const app = new Vue({
             },
         ],
         userName: "Marta Bernardo" ,
-        contactIndex: 0,
+        contactIndex: 0, 
         newMessage: "",
         botMessage:"Ciao!",
+        names:[],
+        search:"",
     
     },
     methods:{
         // IMPOSTARE CONTATTO ATTRAVERSO L'INDEX (milestone 2)
         setContact(index){
             this.contactIndex = index;
-            console.log(this.contactIndex);
+            // console.log(this.contactIndex);
         },
         // INVIARE NUOVO MESSAGGIO  (milestone 3)
         addMessage(){
@@ -140,6 +142,7 @@ const app = new Vue({
             }, 1000)}
                 
         },
+      
        
     }
 
