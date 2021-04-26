@@ -205,10 +205,10 @@ body{
     justify-content: flex-end;
 }
 
-.received,
-.sent{
+/* .received, */
+/* .sent{
     margin-bottom: 20px;
-}
+} */
 
 .message{
     align-items: center;
@@ -230,11 +230,11 @@ body{
 
 /* message colors */
 
-.received-color{
+.message.received-color{
     background:#fff;
 }
 
-.sent-color{
+.message.sent-color{
     background:#DCF8C6;
 }
 

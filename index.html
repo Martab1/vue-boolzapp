@@ -58,10 +58,12 @@
              <!-- four section side -->
             <section class="contacts">
                  <div>
-                     <ul class=" flex list-style list " v-for="contact in contacts" >
-                         <li class="flex">
+                     <ul class=" flex list-style list " >
+                         <li class="flex"
+                         v-for="(contact,index) in contacts"
+                         >
                              <img :src= " './img/avatar' + contact.avatar + '.jpg' " :alt="contact.avatar">
-                             <span>{{contact.name}}</span>
+                             <span @click="setContact(index)">{{contact.name}}</span>
                          </li>
 
                      </ul>
@@ -92,22 +94,29 @@
             </section>
 
             <!-- main content-->
-            <section class="main-content">
+            <section class="main-content" v-for="(contact,index) in contacts[contactIndex].messages" >
+
                 <!-- sent -->
-                <div class="sent flex">
-                    <div class=" message pos-relative flex sent-color">
-                        <p>Messaggio inviato</p>
+                <div class=" flex"
+                     v-if=" contact.status == 'sent'" 
+                     :class="{sent: contact.status == 'sent'} "
+                >
+                    <div class=" message pos-relative flex sent-color ">
+                        <p>{{ contact.message}}</p>
                         <span>23/04/2021 15:50:00</span>
                      </div>
                  </div>
 
                  <!-- received-->
-                <div class="received ">
+                <div class="received "
+                     v-if=" contact.status == 'received'" 
+                >
                     <div class=" message pos-relative flex received-color">
-                        <p>Messaggio ricevuto</p>
+                        <p>{{ contact.message}}</p>
                         <span>23/04/2021 15:50:00</span>
                     </div>
                 </div>
+
             </section>
 
             <!-- footer content-->
