@@ -78,9 +78,9 @@
             <section class=" header-content flex">
                 <!-- avatar -->
                 <div class=" flex user">
-                    <img  src="./img/avatar_2.jpg" alt="">
+                    <img  :src=" './img/avatar' + contacts[contactIndex].avatar + '.jpg'" alt="contacts[contactIndex].avatar">
                     <div>
-                        <span>Fabio</span>
+                        <span>{{contacts[contactIndex].name}}</span>
                         <p>Ultimo accesso oggi alle 10.35</p>
                     </div>
                     
