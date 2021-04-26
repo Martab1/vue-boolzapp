@@ -205,10 +205,10 @@ body{
     justify-content: flex-end;
 }
 
-/* .received, */
-/* .sent{
+.received,
+.sent{
     margin-bottom: 20px;
-} */
+}
 
 .message{
     align-items: center;

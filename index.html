@@ -94,28 +94,33 @@
             </section>
 
             <!-- main content-->
-            <section class="main-content" v-for="(contact,index) in contacts[contactIndex].messages" >
+            <section class="main-content">
 
-                <!-- sent -->
-                <div class=" flex"
-                     v-if=" contact.status == 'sent'" 
-                     :class="{sent: contact.status == 'sent'} "
-                >
-                    <div class=" message pos-relative flex sent-color ">
-                        <p>{{ contact.message}}</p>
-                        <span>23/04/2021 15:50:00</span>
-                     </div>
-                 </div>
+                <div v-for="(contact,index) in contacts[contactIndex].messages" >
 
-                 <!-- received-->
-                <div class="received "
-                     v-if=" contact.status == 'received'" 
-                >
-                    <div class=" message pos-relative flex received-color">
-                        <p>{{ contact.message}}</p>
-                        <span>23/04/2021 15:50:00</span>
+                    <!-- sent -->
+                    <div class=" flex"
+                        v-if=" contact.status == 'sent'" 
+                        :class="{sent: contact.status == 'sent'} "
+                    >
+                        <div class=" message pos-relative flex sent-color ">
+                            <p>{{ contact.message}}</p>
+                            <span>23/04/2021 15:50:00</span>
+                        </div>
                     </div>
+
+                    <!-- received-->
+                    <div class="received "
+                         v-if=" contact.status == 'received'" 
+                    >
+                        <div class=" message pos-relative flex received-color">
+                            <p>{{ contact.message}}</p>
+                            <span>23/04/2021 15:50:00</span>
+                        </div>
+                    </div>
+                
                 </div>
+                
 
             </section>
 
