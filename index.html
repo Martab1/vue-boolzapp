@@ -127,7 +127,14 @@
             <!-- footer content-->
             <section class=" footer-content flex">
                 <i class="far fa-smile icon "></i>
-                <input type="text" class="new-message" placeholder="Scrivi un messaggio">
+                <input 
+                type="text" 
+                class="new-message" 
+                placeholder="Scrivi un messaggio..."
+                v-model.trim="newMessage"
+                @keyup.enter="addMessage"
+
+                >
                 <i class="fas fa-microphone icon "></i>
             </section>
 
