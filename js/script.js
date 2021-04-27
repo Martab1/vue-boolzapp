@@ -110,11 +110,19 @@ const app = new Vue({
         userName: "Marta Bernardo" ,
         contactIndex: 0, 
         newMessage: "",
-        botMessage:"Ciao!",
+        // botMessage:"[]",
         search: "",
-
-       
-    
+        itemsRandom: [
+            { text: "Credo di non aver capito"},
+            { text: "Ciao, come stai?"},
+            { text: "Io tutto bene, grazie!"},
+            { text: "Quanto tempo che non ci sentiamo!!"},
+            { text: "Ti stavo pensando proprio l'altro giorno!"},
+            { text: "Credo tu abbia sbagliato numero..."},
+            { text: "Che bello sentirti! Quando ci vediamo?"}
+        
+        ],
+        itemsIndex: 0,
     },
     methods:{
         // IMPOSTARE CONTATTO ATTRAVERSO L'INDEX (milestone 2)
@@ -128,6 +136,8 @@ const app = new Vue({
                 this.contacts[this.contactIndex].messages.push({
                     message: this.newMessage,
                     status: 'sent',
+                    date:'10/01/2020 16:15:22',
+
                 })
 
                 // reset
@@ -136,9 +146,17 @@ const app = new Vue({
             // RISPOSTA INTERLOCUTORE dopo 1s
             setTimeout((addMessage) => {
                 this.contacts[this.contactIndex].messages.push({
-                    message: this.botMessage,
-                    status: 'received'
+                    message: this.itemsRandom[this.itemsIndex].text,
+                    status: 'received',
+                    date:'10/01/2020 16:15:22',
                 })
+
+
+                // RISPOSTE RANDOM (bonus)
+                this.itemsRandom.forEach((num) => {
+                this.itemsIndex = Math.floor( Math.random() * this.itemsRandom.length);
+                })
+           
                 
             }, 1000)}
                 
@@ -152,12 +170,10 @@ const app = new Vue({
                     contact.visible = false;
                 }
 
-                
-                
-                
-
             });
-        }
+        },
+           
+        
       
        
     }
