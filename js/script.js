@@ -111,8 +111,9 @@ const app = new Vue({
         contactIndex: 0, 
         newMessage: "",
         botMessage:"Ciao!",
-        names:[],
-        search:"",
+        search: "",
+
+       
     
     },
     methods:{
@@ -142,6 +143,21 @@ const app = new Vue({
             }, 1000)}
                 
         },
+        // RICERCA CONTATTI (milestone 4)
+        searchContacts(){
+            this.contacts.forEach(contact => {
+                if( contact.name.toLowerCase().includes(this.search.toLowerCase() )) {
+                    contact.visible = true;
+                } else {
+                    contact.visible = false;
+                }
+
+                
+                
+                
+
+            });
+        }
       
        
     }

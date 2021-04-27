@@ -53,6 +53,8 @@
                 <input type="text" 
                       class="input" 
                       placeholder="Cearca o inizia una nuova chat"
+                      v-model.trim="search"
+                      @keyup="searchContacts"
 
                       >
                 
@@ -62,10 +64,12 @@
                  <div>
                      <ul class=" flex list-style list " >
                          <li class="flex"
-                         v-for="(contact,index) in contacts"
+                             v-for="(contact,index) in contacts"
+                             @click="setContact(index)"
+                             v-show="contact.visible"
                          >
                              <img :src= " './img/avatar' + contact.avatar + '.jpg' " :alt="contact.avatar">
-                             <span @click="setContact(index)">{{contact.name}}</span>
+                             <span>{{contact.name}}</span>
                          </li>
 
                      </ul>
@@ -107,7 +111,7 @@
                     >
                         <div class=" message pos-relative flex sent-color ">
                             <p>{{ contact.message}}</p>
-                            <span>23/04/2021 15:50:00</span>
+                            <span>{{ contact.date}}</span>
                         </div>
                     </div>
 
@@ -117,7 +121,7 @@
                     >
                         <div class=" message pos-relative flex received-color">
                             <p>{{ contact.message}}</p>
-                            <span>23/04/2021 15:50:00</span>
+                            <span>{{ contact.date}}</span>
                         </div>
                     </div>
                 
