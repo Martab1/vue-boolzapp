@@ -132,9 +132,14 @@
 
             <!-- footer content-->
             <section class=" footer-content flex">
+
                 <div class=" dropdown pos-relative">
-                <i class="far fa-smile icon "></i>
-                    <div class="dropdown-menu" >
+                <i class="far fa-smile icon "
+                    @click="showEmojis"
+                    
+                 ></i>
+
+                    <div class="dropdown-menu" v-show="emojisVisible">
                         <span v-for="item in emojis"
                               class=" item-emojis"
                         > {{item}}</span>

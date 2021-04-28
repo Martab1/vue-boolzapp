@@ -276,11 +276,10 @@ body{
 
 
 
-
+/* EMOJIS */
 
 .dropdown-menu{
     z-index: 1;
-    /* display:none;   js */
     position: absolute;
     bottom: 45px;
     left: 0;
@@ -296,3 +295,4 @@ body{
    font-size: 24px;
    margin: 10px 5px ;
 }
+
