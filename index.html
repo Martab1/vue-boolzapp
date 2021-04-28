@@ -140,8 +140,9 @@
                  ></i>
 
                     <div class="dropdown-menu" v-show="emojisVisible">
-                        <span v-for="item in emojis"
+                        <span v-for="(item,index) in emojis"
                               class=" item-emojis"
+                              @click="emoji(item)"
                         > {{item}}</span>
                         
                     </div>
@@ -156,7 +157,7 @@
                     class="new-message" 
                     placeholder="Scrivi un messaggio..."
                     v-model.trim="newMessage"
-                    @keyup.enter="addMessage"
+                    @keyup.enter="addMessage "
     
                     >
                     <i class="fas fa-microphone icon "></i>
