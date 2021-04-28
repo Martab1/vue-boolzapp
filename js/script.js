@@ -137,7 +137,7 @@ const app = new Vue({
         // emojis
         emojis:["✌","😂","😝","😁","😱","👉","🙌","🍻","🔥","🌈","☀","🎈","🌹","💄","🎀","⚽","🎾","🏁","😡","👿","🐻","🐶","🐬","🐟","🍀","👀","🚗","🍎","💝","💙","👌","❤","😍","😉","😓","😳","💪","💩","🍸","🔑","💖","🌟","🎉","🌺","🎶","👠","🏈","⚾","🏆","👽","💀","🐵","🐮","🐩","🐎","💣","👃","👂","🍓","💘","💜","👊","💋","😘","😜","😵","🙏","👋","🚽","💃","💎","🚀","🌙","🎁","⛄","🌊","⛵","🏀","🎱","💰","👶","👸","🐰","🐷","🐍","🐫","🔫","👄","🚲","🍉","💛","💚"],
         emojisVisible: false,
-        emojisIndex: 0,
+        
         
         
     },
@@ -189,15 +189,13 @@ const app = new Vue({
 
             });
         },
-        // EMOJIS MENU (bonus)
+        // EMOJIS MENU VISIBILITà(bonus)
         showEmojis(){
            this.emojisVisible = ! this.emojisVisible;
         },
-        
+         // AGGIUNTA EMOJIS ALL'INPUT NEW MESSAGE (bonus)
         emoji(item){
           this.newMessage += item;
-
-           
 
         }
 

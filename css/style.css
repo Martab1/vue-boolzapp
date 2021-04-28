@@ -288,8 +288,14 @@ body{
 }
 
 .item-emojis{
+    display: inline-block;
    cursor: pointer;
    font-size: 24px;
-   margin: 10px 5px ;
+   margin: 5px 5px ;
+   transition: transform .3s;
+}
+
+.item-emojis:hover{
+    transform: scale(1.3);
 }
 
