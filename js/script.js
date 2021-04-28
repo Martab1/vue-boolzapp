@@ -18,6 +18,8 @@ Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati
 
 
 
+
+// VUE 
 const app = new Vue({
     el: "#app",
     data:{
@@ -107,15 +109,20 @@ const app = new Vue({
                 ],
             },
         ],
-        userName: "Marta Bernardo" ,
+     
+        // user 
+        user:{
+             name: "Marta Bernardo",
+             avatar: "_io",
+
+        },
         contactIndex: 0, 
         newMessage: "",
-        // botMessage:"[]",
         search: "",
         itemsRandom: [
             { text: "Credo di non aver capito"},
             { text: "Ciao, come stai?"},
-            { text: "Io tutto bene, grazie!"},
+            { text: "Io sto molto bene."},
             { text: "Quanto tempo che non ci sentiamo!!"},
             { text: "Ti stavo pensando proprio l'altro giorno!"},
             { text: "Credo tu abbia sbagliato numero..."},
@@ -123,6 +130,7 @@ const app = new Vue({
         
         ],
         itemsIndex: 0,
+        emojis:["✌","😂","😝","😁","😱","👉","🙌","🍻","🔥","🌈","☀","🎈","🌹","💄","🎀","⚽","🎾","🏁","😡","👿","🐻","🐶","🐬","🐟","🍀","👀","🚗","🍎","💝","💙","👌","❤","😍","😉","😓","😳","💪","💩","🍸","🔑","💖","🌟","🎉","🌺","🎶","👠","🏈","⚾","🏆","👽","💀","🐵","🐮","🐩","🐎","💣","👃","👂","🍓","💘","💜","👊","💋","😘","😜","😵","🙏","👋","🚽","💃","💎","🚀","🌙","🎁","⛄","🌊","⛵","🏀","🎱","💰","👶","👸","🐰","🐷","🐍","🐫","🔫","👄","🚲","🍉","💛","💚"]
     },
     methods:{
         // IMPOSTARE CONTATTO ATTRAVERSO L'INDEX (milestone 2)
@@ -144,7 +152,7 @@ const app = new Vue({
                 this.newMessage = "";
 
             // RISPOSTA INTERLOCUTORE dopo 1s
-            setTimeout((addMessage) => {
+            setTimeout(() => {
                 this.contacts[this.contactIndex].messages.push({
                     message: this.itemsRandom[this.itemsIndex].text,
                     status: 'received',

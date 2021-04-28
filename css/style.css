@@ -252,6 +252,12 @@ body{
      color: grey;
      font-size: 20px;
      padding: 12px 30px;
+     cursor: pointer
+}
+
+.footer-content .fa-smile:hover,
+.footer-content .fa-microphone:hover{
+     color: rgb(100, 96, 96);
 }
 
 .new-message{
@@ -265,4 +271,28 @@ body{
 
 .new-message::placeholder{
     opacity: .3;
+}
+
+
+
+
+
+
+.dropdown-menu{
+    z-index: 1;
+    /* display:none;   js */
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    width: 858px;
+    padding: 5px 5px;
+    /* filter:drop-shadow(0 0 5px rgba(0,0,0, .1)); */
+    background: rgba(234 231 228);
+    
+}
+
+.item-emojis{
+   cursor: pointer;
+   font-size: 24px;
+   margin: 10px 5px ;
 }
