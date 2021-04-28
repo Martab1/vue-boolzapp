@@ -110,7 +110,7 @@
                         :class="{sent: contact.status == 'sent'} "
                     >
                         <div class=" message pos-relative flex sent-color ">
-                            <p>{{ contact.message}}</p>
+                            <p class=" text">{{ contact.message}}</p>
                             <span>{{ contact.date}}</span>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                          v-if=" contact.status == 'received'" 
                     >
                         <div class=" message pos-relative flex received-color">
-                            <p>{{ contact.message}}</p>
+                            <p class=" text">{{ contact.message}}</p>
                             <span>{{ contact.date}}</span>
                         </div>
                     </div>
