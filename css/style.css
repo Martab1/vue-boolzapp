@@ -281,11 +281,8 @@ body{
 .dropdown-menu{
     z-index: 1;
     position: absolute;
-    bottom: 45px;
-    left: 0;
-    width: 858px;
+    bottom: 60px;
     padding: 5px 5px;
-    /* filter:drop-shadow(0 0 5px rgba(0,0,0, .1)); */
     background: rgba(234 231 228);
     
 }
